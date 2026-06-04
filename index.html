@@ -1,9 +1,212 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miao Miao (Rei) | Resume & Portfolio</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Professional resume and portfolio of Miao Miao (Rei), Full Stack Engineer & Creative Developer. Explore experience, skills, and interactive projects.">
+  <meta name="keywords" content="Miao Miao, Rei, Full Stack Engineer, Web Developer, Resume, Portfolio, Frontend Engineer Tokyo">
+  <meta name="author" content="Miao Miao">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
-<h1>Miao Miao rei's website</h1>
-<p>rei.</p>
+  <div class="app-container">
+    
+    <!-- Sidebar: Profile & Contacts -->
+    <aside class="sidebar">
+      <div class="profile-card">
+        <div class="avatar-wrapper">
+          <img id="profile-avatar" src="" alt="Avatar" class="avatar-img">
+        </div>
+        <h1 id="profile-name" class="profile-name">Miao Miao</h1>
+        <div id="profile-nickname" class="profile-nickname">Rei</div>
+        <h2 id="profile-title" class="profile-title">Loading...</h2>
+        <p id="profile-bio" class="profile-bio">Loading bio details...</p>
+      </div>
 
+      <!-- Contact Info -->
+      <ul class="contact-list">
+        <li class="contact-item">
+          <!-- Email Icon -->
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <a id="contact-email" href="#">Loading...</a>
+        </li>
+        <li class="contact-item">
+          <!-- Phone Icon -->
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <a id="contact-phone" href="#">Loading...</a>
+        </li>
+        <li class="contact-item">
+          <!-- Pin Icon -->
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span id="contact-location">Loading...</span>
+        </li>
+        <li class="contact-item">
+          <!-- Globe/Website Icon -->
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <a id="contact-website" href="#" target="_blank" rel="noopener noreferrer">Loading...</a>
+        </li>
+      </ul>
+
+      <!-- Action Buttons -->
+      <div class="action-buttons">
+        <button id="print-resume" class="btn btn-primary">
+          <!-- Print/PDF Icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
+          </svg>
+          Print Resume / PDF
+        </button>
+        <a href="#contact" class="btn btn-secondary" style="text-decoration: none;">
+          Get In Touch
+        </a>
+      </div>
+
+      <!-- Controls Panel (Theme & Edit Toggle) -->
+      <div class="controls-panel">
+        <button id="theme-toggle" class="theme-toggle" title="Toggle Theme" aria-label="Toggle light/dark theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <!-- Dynamic sun/moon injected by JS -->
+          </svg>
+        </button>
+        
+        <div class="social-links">
+          <a id="contact-github" href="#" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg>
+          </a>
+          <a id="contact-linkedin" href="#" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        </div>
+
+        <button id="edit-toggle" class="edit-toggle" title="Live Edit Content" aria-label="Toggle Live Edit Mode">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+            <path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+          </svg>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="content-area">
+      
+      <!-- About / Profile Bio -->
+      <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="glass-card">
+          <p id="about-text" class="about-text">Loading bio...</p>
+        </div>
+      </section>
+
+      <!-- Work Experience -->
+      <section id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div id="experience-timeline" class="timeline">
+          <!-- Timelines dynamic render -->
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section id="education">
+        <h2 class="section-title">Education</h2>
+        <div id="education-timeline" class="timeline">
+          <!-- Education dynamic render -->
+        </div>
+      </section>
+
+      <!-- Professional Skills -->
+      <section id="skills">
+        <h2 class="section-title">Skills Matrix</h2>
+        <div id="skills-grid" class="skills-container">
+          <!-- Skills categorized grid render -->
+        </div>
+      </section>
+
+      <!-- Featured Projects -->
+      <section id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        
+        <!-- Category Filters -->
+        <div class="projects-filter">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="frontend">Frontend</button>
+          <button class="filter-btn" data-filter="backend">Backend & Tech</button>
+        </div>
+
+        <div id="projects-grid" class="projects-grid">
+          <!-- Dynamic projects render -->
+        </div>
+      </section>
+
+      <!-- Contact Form -->
+      <section id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="glass-card">
+          <form id="contact-form" class="contact-form">
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="form-name">Your Name</label>
+                <input type="text" id="form-name" class="form-control" placeholder="Jane Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="form-email">Email Address</label>
+                <input type="email" id="form-email" class="form-control" placeholder="jane@example.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="form-subject">Subject</label>
+              <input type="text" id="form-subject" class="form-control" placeholder="Collaboration Project" required>
+            </div>
+            <div class="form-group">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" class="form-control" placeholder="Hi Miao Miao, I'd love to connect..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Send Message</button>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- Live Edit Action Floating Panel -->
+  <div id="edit-panel" class="edit-panel">
+    <div class="edit-panel-title">🛠️ Live Edit Mode</div>
+    <p class="edit-panel-desc">Click any text on the page to change it. Then choose an option below to save your resume.</p>
+    <button id="copy-data" class="btn btn-secondary">
+      Copy Code for data.js
+    </button>
+    <button id="download-data" class="btn btn-primary">
+      Download data.js
+    </button>
+    <button id="reset-changes" class="btn btn-secondary" style="color: #ef4444; border-color: rgba(239, 68, 68, 0.2);">
+      Discard Changes
+    </button>
+  </div>
+
+  <!-- Script tags -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
