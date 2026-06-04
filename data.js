@@ -5,8 +5,8 @@
 
 const resumeData = {
   profile: {
-    name: "Miao Miao",
-    nickname: "Rei",
+    name: "Wang Qi",
+    nickname: "Qi",
     title: "Full Stack Engineer & Creative Developer",
     bio: "Passionate software engineer specializing in building high-performance, visually stunning web experiences. I bridge the gap between clean engineering and elegant UI/UX design, bringing interactive products to life with modern technologies.",
     avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80", // Premium placeholder avatar
@@ -48,7 +48,7 @@ const resumeData = {
   education: [
     {
       degree: "B.S. in Computer Science",
-      institution: "Tokyo University of Science",
+      institution: "Konkuk University",
       duration: "2018 - 2022",
       description: "Specialized in Software Engineering and Human-Computer Interaction. Graduated with honors."
     }
