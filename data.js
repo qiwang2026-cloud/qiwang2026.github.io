@@ -3,7 +3,7 @@ const resumeData = {
     name: "Wang Qi",
     nickname: "Rei",
     title: "International Commerce and Business Student",
-    bio: "I am a freshman at Konkuk University. I run a doll clothing business, play guitar in a band, and explore AI tools for business and creativity.",
+    bio: "Freshman at Konkuk University. Running a doll clothing business, guitarist in a band, exploring AI tools for business and creativity.",
     avatar: "",
 
     contact: {
@@ -18,12 +18,18 @@ const resumeData = {
     {
       role: "Doll Clothing Business Owner",
       company: "Independent Online Shop",
-      duration: "2024 - Present"
+      duration: "2024 - Present",
+      location: "Seoul, South Korea",
+      description: "Designing and selling handmade doll clothing.",
+      highlights: ["Design", "E-commerce", "Marketing"]
     },
     {
       role: "Guitarist",
       company: "Underground Band",
-      duration: "2023 - Present"
+      duration: "2023 - Present",
+      location: "Seoul, South Korea",
+      description: "Performing and composing music.",
+      highlights: ["Live performance", "Teamwork"]
     }
   ],
 
@@ -54,7 +60,7 @@ const resumeData = {
   projects: [
     {
       title: "AI Resume Website",
-      description: "Portfolio built with AI tools",
+      description: "Built with AI tools and GitHub Pages",
       link: "https://github.com/qiwang2026-cloud"
     }
   ]
