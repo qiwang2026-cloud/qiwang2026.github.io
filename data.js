@@ -2,70 +2,33 @@ const resumeData = {
   profile: {
     name: "Wang Qi",
     nickname: "Rei",
-    title: "International Commerce & Business Student",
-    bio: "International Commerce student at Konkuk University. I run a doll clothing business, play guitar in an underground band, and explore AI + digital business.",
+    title: "Student",
+    bio: "Portfolio website",
 
     contact: {
-      email: "qiwang2026@outlook.com",
-      phone: "010-59311153",
-      location: "Seoul, South Korea",
-      github: "https://github.com/qiwang2026-cloud",
-      linkedin: "https://linkedin.com",
-      website: "https://qiwang2026-cloud.github.io/qiwang2026.github.io/"
+      email: "test@email.com",
+      phone: "000",
+      location: "Seoul",
+      website: "#"
     }
   },
 
   experience: [
-    {
-      role: "Doll Clothing Business Owner",
-      company: "Independent Shop",
-      duration: "2024 - Present",
-      description: "Designed and sold handmade doll clothing products online."
-    },
-    {
-      role: "Guitarist",
-      company: "Underground Band",
-      duration: "2023 - Present",
-      description: "Performed live music in student band activities."
-    }
+    { role: "Work", company: "Company", duration: "Now", description: "..." }
   ],
 
   education: [
-    {
-      degree: "Bachelor of International Commerce & Business",
-      institution: "Konkuk University",
-      duration: "2026 - Present",
-      description: "Studying global business, marketing, and digital commerce."
-    }
+    { degree: "Degree", institution: "School", description: "..." }
   ],
 
   skills: {
-    frontend: [
-      { name: "HTML", level: 85 },
-      { name: "CSS", level: 80 },
-      { name: "JavaScript", level: 75 }
-    ],
-    backend: [
-      { name: "AI Tools", level: 92 },
-      { name: "Business", level: 80 }
-    ],
-    tools: [
-      { name: "ChatGPT", level: 95 },
-      { name: "GitHub", level: 85 }
-    ]
+    frontend: [{ name: "HTML", level: 80 }],
+    backend: [],
+    tools: []
   },
 
   projects: [
-    {
-      title: "AI Portfolio Website",
-      description: "AI-assisted personal portfolio.",
-      tags: ["HTML", "CSS", "JS"]
-    },
-    {
-      title: "Doll Clothing Business",
-      description: "E-commerce handmade product business.",
-      tags: ["Business", "Design"]
-    }
+    { title: "Project", description: "Desc", tags: [] }
   ]
 };
 
