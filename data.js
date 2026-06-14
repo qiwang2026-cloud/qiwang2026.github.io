@@ -1,34 +1,44 @@
 const resumeData = {
   profile: {
     name: "Wang Qi",
-    nickname: "Rei",
     title: "Student",
-    bio: "Portfolio website",
+    bio: "Portfolio Website",
 
     contact: {
       email: "test@email.com",
       phone: "000",
-      location: "Seoul",
-      website: "#"
+      location: "Seoul"
     }
   },
 
+  about: "This is my personal portfolio website.",
+
   experience: [
-    { role: "Work", company: "Company", duration: "Now", description: "..." }
+    {
+      role: "Research Assistant",
+      company: "University Lab"
+    }
   ],
 
   education: [
-    { degree: "Degree", institution: "School", description: "..." }
+    {
+      degree: "Bachelor Degree",
+      institution: "University"
+    }
   ],
 
   skills: {
-    frontend: [{ name: "HTML", level: 80 }],
-    backend: [],
-    tools: []
+    frontend: [
+      { name: "HTML" },
+      { name: "CSS" },
+      { name: "JavaScript" }
+    ]
   },
 
   projects: [
-    { title: "Project", description: "Desc", tags: [] }
+    {
+      title: "Portfolio Website"
+    }
   ]
 };
 
