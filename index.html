@@ -1,84 +1,52 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wang Qi | Resume & Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wang Qi</title>
 
-  <meta name="description" content="Wang Qi Portfolio">
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <div class="app-container">
 
-  <!-- SIDEBAR -->
   <aside class="sidebar">
+    <h1 id="profile-name"></h1>
+    <h3 id="profile-title"></h3>
+    <p id="profile-bio"></p>
 
-    <div class="profile-card">
-
-      <div class="avatar-wrapper">
-        < img id="profile-avatar" src="" alt="Avatar" class="avatar-img">
-      </div>
-
-      <h1 id="profile-name">Loading...</h1>
-      <div id="profile-nickname">Rei</div>
-      <h2 id="profile-title">Loading...</h2>
-      <p id="profile-bio">Loading...</p >
-
-    </div>
-
-    <ul class="contact-list">
-
-      <li>
-        <span>Email:</span>
-        <a id="contact-email" href=" ">Loading...</a >
-      </li>
-
-      <li>
-        <span>Phone:</span>
-        <a id="contact-phone" href="#">Loading...</a >
-      </li>
-
-      <li>
-        <span>Location:</span>
-        <span id="contact-location">Loading...</span>
-      </li>
-
-      <li>
-        <span>Website:</span>
-        <a id="contact-website" href="#">Loading...</a >
-      </li>
-
+    <ul>
+      <li>Email: <span id="contact-email"></span></li>
+      <li>Phone: <span id="contact-phone"></span></li>
+      <li>Location: <span id="contact-location"></span></li>
     </ul>
-
   </aside>
 
-  <!-- MAIN -->
   <main class="content-area">
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p id="about-text">Loading...</p >
+    <section>
+      <h2>About</h2>
+      <p id="about-text"></p>
     </section>
 
-    <section id="experience">
+    <section>
       <h2>Experience</h2>
       <div id="experience-timeline"></div>
     </section>
 
-    <section id="education">
+    <section>
       <h2>Education</h2>
       <div id="education-timeline"></div>
     </section>
 
-    <section id="skills">
+    <section>
       <h2>Skills</h2>
       <div id="skills-grid"></div>
     </section>
 
-    <section id="projects">
+    <section>
       <h2>Projects</h2>
       <div id="projects-grid"></div>
     </section>
@@ -87,7 +55,6 @@
 
 </div>
 
-<!-- IMPORTANT: order must NOT change -->
 <script src="data.js"></script>
 <script src="app.js"></script>
 
