@@ -1,68 +1,58 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wang Qi | Resume & Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Wang Qi | Portfolio</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="app-container">
+<header class="hero">
+  <h1 id="name">Loading...</h1>
+  <p id="title">Loading...</p >
+</header>
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
+<div class="container">
 
-    <div class="profile-card">
-      <div class="avatar-wrapper">
-        < img id="profile-avatar" src="" class="avatar-img">
-      </div>
+  <section class="card">
+    <h2>About</h2>
+    <p id="bio"></p >
+  </section>
 
-      <h1 id="profile-name">Loading...</h1>
-      <div id="profile-nickname">Loading...</div>
-      <h2 id="profile-title">Loading...</h2>
-      <p id="profile-bio">Loading...</p >
+  <section class="grid">
+
+    <div class="card">
+      <h2>Experience</h2>
+      <div id="experience"></div>
     </div>
 
-    <ul class="contact-list">
-      <li><a id="contact-email"></a ></li>
-      <li><a id="contact-phone"></a ></li>
-      <li><span id="contact-location"></span></li>
-      <li><a id="contact-website"></a ></li>
-    </ul>
-
-  </aside>
-
-  <!-- MAIN -->
-  <main class="content-area">
-
-    <section>
-      <h2>Experience</h2>
-      <div id="experience-timeline"></div>
-    </section>
-
-    <section>
+    <div class="card">
       <h2>Education</h2>
-      <div id="education-timeline"></div>
-    </section>
+      <div id="education"></div>
+    </div>
 
-    <section>
-      <h2>Skills Matrix</h2>
-      <div id="skills-grid"></div>
-    </section>
+    <div class="card">
+      <h2>Skills</h2>
+      <div id="skills"></div>
+    </div>
 
-    <section>
-      <h2>Featured Projects</h2>
-      <div id="projects-grid"></div>
-    </section>
+    <div class="card">
+      <h2>Projects</h2>
+      <div id="projects"></div>
+    </div>
 
-  </main>
+  </section>
+
+  <section class="card">
+    <h2>Contact</h2>
+    <p id="contact"></p >
+  </section>
 
 </div>
 
 <script src="data.js"></script>
 <script src="app.js"></script>
-
 </body>
 </html>
