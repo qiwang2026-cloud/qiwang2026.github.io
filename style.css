@@ -5,45 +5,99 @@ body {
   color: white;
 }
 
-.hero {
-  text-align: center;
-  padding: 80px 20px;
+.layout {
+  display: flex;
+  min-height: 100vh;
 }
 
-.hero h1 {
-  font-size: 40px;
+.sidebar {
+  width: 320px;
+  padding: 30px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(25px);
 }
 
-.hero p {
+.content {
+  flex: 1;
+  padding: 40px;
+}
+
+h2 {
   color: #aaa;
 }
 
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
+/* cards */
 .card {
   background: rgba(255,255,255,0.06);
-  padding: 20px;
-  border-radius: 16px;
-  backdrop-filter: blur(10px);
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 14px;
+  cursor: pointer;
   transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  background: rgba(255,255,255,0.1);
+  transform: translateY(-6px);
+  background: rgba(255,255,255,0.12);
 }
 
-.item {
-  padding: 6px 0;
-  color: #ddd;
+/* skill bar */
+.skill {
+  margin: 10px 0;
+}
+
+.bar {
+  background: #222;
+  height: 6px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar div {
+  height: 100%;
+  background: linear-gradient(90deg,#4facfe,#00f2fe);
+}
+
+/* modal */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in {
+  animation: fade 1s ease forwards;
+}
+
+@keyframes fade {
+  from {opacity: 0; transform: translateX(-20px);}
+  to {opacity: 1; transform: translateX(0);}
 }
