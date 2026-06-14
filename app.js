@@ -2,63 +2,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const data = window.resumeData;
 
-if (!data) {
-  console.error("resumeData not found");
-  return;
-}
+if (!data) return;
 
-// helper
-const set = (id, v) => {
-  const el = document.getElementById(id);
-  if (el) el.innerText = v || "";
-};
+// LEFT
+document.getElementById("profile-name").innerText = data.profile.name;
+document.getElementById("profile-nickname").innerText = data.profile.nickname;
+document.getElementById("profile-title").innerText = data.profile.title;
+document.getElementById("profile-bio").innerText = data.profile.bio;
 
-const setLink = (id, v, prefix="") => {
-  const el = document.getElementById(id);
-  if (el) {
-    el.innerText = v || "";
-    if (v && prefix) el.href = prefix + v;
-  }
-};
+const c = data.profile.contact;
 
-// PROFILE
-set("profile-name", data.profile?.name);
-set("profile-title", data.profile?.title);
-set("profile-bio", data.profile?.bio);
-
-// CONTACT
-const c = data.profile?.contact || {};
-setLink("contact-email", c.email, "mailto:");
-setLink("contact-phone", c.phone, "tel:");
-setLink("contact-location", c.location);
-setLink("contact-website", c.website);
+document.getElementById("contact-email").innerText = c.email;
+document.getElementById("contact-phone").innerText = c.phone;
+document.getElementById("contact-location").innerText = c.location;
+document.getElementById("contact-website").innerText = c.website;
 
 // EXPERIENCE
 document.getElementById("experience-timeline").innerHTML =
-(data.experience || []).map(e =>
-  `<div class="item"><b>${e.role}</b> - ${e.company}</div>`
+data.experience.map(e =>
+  `<div><b>${e.role}</b><br>${e.company}</div>`
 ).join("");
 
 // EDUCATION
 document.getElementById("education-timeline").innerHTML =
-(data.education || []).map(e =>
-  `<div class="item"><b>${e.degree}</b> - ${e.institution}</div>`
+data.education.map(e =>
+  `<div><b>${e.degree}</b><br>${e.institution}</div>`
 ).join("");
 
 // SKILLS
-const skills = [
-  ...(data.skills?.frontend || []),
-  ...(data.skills?.backend || []),
-  ...(data.skills?.tools || [])
-];
-
 document.getElementById("skills-grid").innerHTML =
-skills.map(s => `<div class="item">${s.name}</div>`).join("");
+[
+  ...data.skills.frontend,
+  ...data.skills.backend,
+  ...data.skills.tools
+].map(s => `<div>${s.name}</div>`).join("");
 
 // PROJECTS
 document.getElementById("projects-grid").innerHTML =
-(data.projects || []).map(p =>
-  `<div class="item"><b>${p.title}</b></div>`
+data.projects.map(p =>
+  `<div><b>${p.title}</b><br>${p.description}</div>`
 ).join("");
 
 });
