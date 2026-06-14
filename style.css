@@ -1,63 +1,109 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-  background: #0b0b0f;
-  color: white;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-.app {
+body {
+  background: #0f0f0f;
+  color: #ffffff;
+}
+
+/* layout */
+.app-container {
   display: flex;
   min-height: 100vh;
 }
 
+/* sidebar */
 .sidebar {
-  width: 320px;
-  padding: 30px;
-  background: rgba(255,255,255,0.04);
-  backdrop-filter: blur(20px);
-  border-right: 1px solid rgba(255,255,255,0.08);
+  width: 300px;
+  background: #151515;
+  padding: 20px;
 }
 
-.profile h1 {
+.profile-card {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.avatar-wrapper {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #333;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-name {
+  font-size: 20px;
   margin-bottom: 5px;
 }
 
-.bio {
-  opacity: 0.7;
+.profile-nickname {
   font-size: 14px;
-}
-
-.contact a {
-  display: block;
   color: #aaa;
-  margin-top: 8px;
-  text-decoration: none;
 }
 
-.main {
+.profile-title {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #ccc;
+}
+
+.profile-bio {
+  font-size: 12px;
+  margin-top: 10px;
+  color: #999;
+}
+
+/* contact */
+.contact-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.contact-list li {
+  margin-bottom: 10px;
+}
+
+.contact-list a,
+.contact-list span {
+  color: #fff;
+  font-size: 13px;
+}
+
+/* main */
+.content-area {
   flex: 1;
-  padding: 40px;
+  padding: 30px;
 }
 
-.card {
-  background: rgba(255,255,255,0.04);
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.08);
-  backdrop-filter: blur(20px);
-  transition: 0.3s;
+section {
+  margin-bottom: 40px;
 }
 
-.card:hover {
-  transform: translateY(-4px);
+h2 {
+  margin-bottom: 15px;
+  border-left: 3px solid #4f46e5;
+  padding-left: 10px;
 }
 
-.item {
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-
-.item:last-child {
-  border: none;
+/* blocks */
+#experience-timeline div,
+#education-timeline div,
+#skills-grid div,
+#projects-grid div {
+  background: #1c1c1c;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
 }
