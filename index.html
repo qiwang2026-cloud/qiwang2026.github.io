@@ -1,54 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wang Qi | Portfolio</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wang Qi | Resume & Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="app">
+<div class="app-container">
 
-  <!-- LEFT -->
+  <!-- Sidebar -->
   <aside class="sidebar">
 
-    <div class="profile">
+    <div class="profile-card">
+
+      <div class="avatar-wrapper">
+        < img id="profile-avatar" src="" alt="Avatar" class="avatar-img">
+      </div>
+
       <h1 id="profile-name">Loading...</h1>
-      <p id="profile-title"></p >
-      <p id="profile-bio" class="bio"></p >
+      <div id="profile-nickname">Rei</div>
+      <h2 id="profile-title">Loading...</h2>
+      <p id="profile-bio">Loading...</p >
+
     </div>
 
-    <div class="contact">
-      <a id="contact-email"></a >
-      <a id="contact-phone"></a >
-      <a id="contact-location"></a >
-      <a id="contact-website"></a >
-    </div>
+    <ul class="contact-list">
+      <li><a id="contact-email"></a ></li>
+      <li><a id="contact-phone"></a ></li>
+      <li><span id="contact-location"></span></li>
+      <li><a id="contact-website"></a ></li>
+    </ul>
 
   </aside>
 
-  <!-- RIGHT -->
-  <main class="main">
+  <!-- Main -->
+  <main class="content-area">
 
-    <section class="card">
+    <section>
       <h2>Experience</h2>
       <div id="experience-timeline"></div>
     </section>
 
-    <section class="card">
+    <section>
       <h2>Education</h2>
       <div id="education-timeline"></div>
     </section>
 
-    <section class="card">
-      <h2>Skills</h2>
+    <section>
+      <h2>Skills Matrix</h2>
       <div id="skills-grid"></div>
     </section>
 
-    <section class="card">
-      <h2>Projects</h2>
+    <section>
+      <h2>Featured Projects</h2>
       <div id="projects-grid"></div>
     </section>
 
