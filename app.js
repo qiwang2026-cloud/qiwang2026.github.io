@@ -1,3 +1,5 @@
+console.log("APP JS LOADED");
+console.log(window.resumeData);
 document.addEventListener("DOMContentLoaded", () => {
   const data = window.resumeData;
   if (!data) {
