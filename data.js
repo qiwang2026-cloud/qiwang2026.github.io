@@ -7,7 +7,7 @@ const resumeData = {
   profile: {
     name: "Wang Qi",
     nickname: "Qi",
-    title: "Full Stack Engineer & Creative Developer",
+    title: "International Commerce and Business Student",
     bio: "Passionate software engineer specializing in building high-performance, visually stunning web experiences. I bridge the gap between clean engineering and elegant UI/UX design, bringing interactive products to life with modern technologies.",
     avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80", // Premium placeholder avatar
     contact: {
