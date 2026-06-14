@@ -1,56 +1,64 @@
-console.log("APP JS LOADED");
-console.log(window.resumeData);
 document.addEventListener("DOMContentLoaded", () => {
-  const data = window.resumeData;
-  if (!data) {
-    console.error("resumeData not found");
+  const data = window.resumeData || {};
+
+  // 如果数据没加载，直接提示（防止 silent fail）
+  if (!window.resumeData) {
+    console.error("resumeData not found. Check data.js loading order.");
     return;
   }
 
   // =====================
   // PROFILE
   // =====================
-  const set = (id, value) => {
+  const setText = (id, value) => {
     const el = document.querySelector(id);
     if (el) el.innerText = value || "";
   };
 
-  set("#profile-name", data.profile.name);
-  set("#profile-nickname", data.profile.nickname);
-  set("#profile-title", data.profile.title);
-  set("#profile-bio", data.profile.bio);
+  setText("#profile-name", data.profile?.name);
+  setText("#profile-nickname", data.profile?.nickname);
+  setText("#profile-title", data.profile?.title);
+  setText("#profile-bio", data.profile?.bio);
 
-  // contact
-  const setHref = (id, value) => {
+  // =====================
+  // CONTACT
+  // =====================
+  const setAttr = (id, attr, value) => {
     const el = document.querySelector(id);
-    if (el && value) el.href = value;
+    if (el && value) el.setAttribute(attr, value);
   };
 
-  set("#contact-email", data.profile.contact.email);
-  set("#contact-phone", data.profile.contact.phone);
-  set("#contact-location", data.profile.contact.location);
-  setHref("#contact-website", data.profile.contact.website);
-  setHref("#contact-github", data.profile.contact.github);
-  setHref("#contact-linkedin", data.profile.contact.linkedin);
+  setText("#contact-email", data.profile?.contact?.email);
+  setText("#contact-phone", data.profile?.contact?.phone);
+  setText("#contact-location", data.profile?.contact?.location);
+
+  setAttr("#contact-email", "href", `mailto:${data.profile?.contact?.email || ""}`);
+  setAttr("#contact-phone", "href", `tel:${data.profile?.contact?.phone || ""}`);
+  setAttr("#contact-website", "href", data.profile?.contact?.website);
+  setAttr("#contact-github", "href", data.profile?.contact?.github);
+  setAttr("#contact-linkedin", "href", data.profile?.contact?.linkedin);
+
+  setText("#contact-website", data.profile?.contact?.website);
 
   // =====================
   // ABOUT
   // =====================
   const about = document.querySelector("#about-text");
-  if (about) about.innerText = data.profile.bio;
+  if (about) about.innerText = data.profile?.bio || "";
 
   // =====================
   // EXPERIENCE
   // =====================
-  const exp = document.querySelector("#experience-timeline");
+  const experience = data.experience || [];
+  const expEl = document.querySelector("#experience-timeline");
 
-  if (exp) {
-    exp.innerHTML = data.experience
+  if (expEl) {
+    expEl.innerHTML = experience
       .map(item => `
         <div class="card reveal">
-          <h3>${item.role}</h3>
-          <p>${item.company} | ${item.duration}</p >
-          <p style="opacity:0.7">${item.description}</p >
+          <h3>${item.role || ""}</h3>
+          <p>${item.company || ""} | ${item.duration || ""}</p >
+          <p style="opacity:0.7">${item.description || ""}</p >
         </div>
       `)
       .join("");
@@ -59,15 +67,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // =====================
   // EDUCATION
   // =====================
-  const edu = document.querySelector("#education-timeline");
+  const education = data.education || [];
+  const eduEl = document.querySelector("#education-timeline");
 
-  if (edu) {
-    edu.innerHTML = data.education
-      .map(e => `
+  if (eduEl) {
+    eduEl.innerHTML = education
+      .map(item => `
         <div class="card reveal">
-          <h3>${e.degree}</h3>
-          <p>${e.institution}</p >
-          <p style="opacity:0.7">${e.description}</p >
+          <h3>${item.degree || ""}</h3>
+          <p>${item.institution || ""}</p >
+          <p style="opacity:0.7">${item.description || ""}</p >
         </div>
       `)
       .join("");
@@ -76,24 +85,25 @@ document.addEventListener("DOMContentLoaded", () => {
   // =====================
   // SKILLS
   // =====================
-  const skillsGrid = document.querySelector("#skills-grid");
+  const skills =
+    [
+      ...(data.skills?.frontend || []),
+      ...(data.skills?.backend || []),
+      ...(data.skills?.tools || [])
+    ];
 
-  const skills = [
-    ...data.skills.frontend,
-    ...data.skills.backend,
-    ...data.skills.tools
-  ];
+  const skillsEl = document.querySelector("#skills-grid");
 
-  if (skillsGrid) {
-    skillsGrid.innerHTML = skills
+  if (skillsEl) {
+    skillsEl.innerHTML = skills
       .map(s => `
         <div class="card reveal">
           <div style="display:flex;justify-content:space-between;">
-            <span>${s.name}</span>
-            <span>${s.level}%</span>
+            <span>${s.name || ""}</span>
+            <span>${s.level || 0}%</span>
           </div>
           <div class="skill-bar">
-            <div class="skill-fill" data-level="${s.level}"></div>
+            <div class="skill-fill" data-level="${s.level || 0}"></div>
           </div>
         </div>
       `)
@@ -103,16 +113,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // =====================
   // PROJECTS
   // =====================
-  const projectsGrid = document.querySelector("#projects-grid");
+  const projects = data.projects || [];
+  const projEl = document.querySelector("#projects-grid");
 
-  if (projectsGrid) {
-    projectsGrid.innerHTML = data.projects
+  if (projEl) {
+    projEl.innerHTML = projects
       .map(p => `
         <div class="card reveal">
-          <h3>${p.title}</h3>
-          <p style="opacity:0.7">${p.description}</p >
+          <h3>${p.title || ""}</h3>
+          <p style="opacity:0.7">${p.description || ""}</p >
           <div>
-            ${p.tags.map(t => `<span>#${t} </span>`).join("")}
+            ${(p.tags || []).map(t => `<span>#${t} </span>`).join("")}
           </div>
         </div>
       `)
@@ -120,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // =====================
-  // ANIMATION
+  // SKILL ANIMATION
   // =====================
   setTimeout(() => {
     document.querySelectorAll(".skill-fill").forEach(el => {
@@ -154,4 +165,6 @@ document.addEventListener("DOMContentLoaded", () => {
     glow.style.left = e.clientX + "px";
     glow.style.top = e.clientY + "px";
   });
+
+  console.log("Portfolio loaded successfully 🚀");
 });
