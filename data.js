@@ -1,45 +1,41 @@
-const resumeData = {
+window.resumeData = {
   profile: {
     name: "Wang Qi",
-    title: "Student",
-    bio: "Portfolio Website",
+    title: "International Business Student",
+    bio: "Student focused on business, AI, and creative projects.",
 
     contact: {
-      email: "test@email.com",
-      phone: "000",
-      location: "Seoul"
+      email: "qiwang2026@outlook.com",
+      phone: "010-0000-0000",
+      location: "Seoul, Korea",
+      website: "https://github.com"
     }
   },
 
-  about: "This is my personal portfolio website.",
-
   experience: [
     {
-      role: "Research Assistant",
-      company: "University Lab"
+      role: "Business Owner",
+      company: "Doll Clothing Shop"
     }
   ],
 
   education: [
     {
-      degree: "Bachelor Degree",
-      institution: "University"
+      degree: "International Commerce",
+      institution: "Konkuk University"
     }
   ],
 
   skills: {
-    frontend: [
-      { name: "HTML" },
-      { name: "CSS" },
-      { name: "JavaScript" }
-    ]
+    frontend: [{ name: "HTML" }, { name: "CSS" }],
+    backend: [{ name: "Business" }],
+    tools: [{ name: "AI Tools" }]
   },
 
   projects: [
     {
-      title: "Portfolio Website"
+      title: "Portfolio Website",
+      description: "Built with HTML/CSS/JS"
     }
   ]
 };
-
-window.resumeData = resumeData;
