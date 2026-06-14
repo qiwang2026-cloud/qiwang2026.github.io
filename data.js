@@ -1,108 +1,118 @@
 /**
- * Resume & Portfolio Data Configuration
- * Edit this file to update the content displayed on your resume website.
- */
+
+* Resume & Portfolio Data Configuration
+* Edit this file to update the content displayed on your resume website.
+  */
 
 const resumeData = {
-  profile: {
-    name: "Wang Qi",
-    nickname: "Qi",
-    title: "International Commerce and Business Student",
-    bio: "Passionate software engineer specializing in building high-performance, visually stunning web experiences. I bridge the gap between clean engineering and elegant UI/UX design, bringing interactive products to life with modern technologies.",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80", // Premium placeholder avatar
-    contact: {
-      email: "hello@miaomiao.dev",
-      phone: "+81 (0) 90-1234-5678",
-      location: "Tokyo, Japan",
-      github: "https://github.com/qiwang2026",
-      linkedin: "https://linkedin.com",
-      website: "https://qiwang2026.github.io"
-    }
-  },
-  experience: [
-    {
-      role: "Senior Software Engineer",
-      company: "InnovateTech Solutions",
-      duration: "2024 - Present",
-      location: "Tokyo, Japan",
-      description: "Leading a front-end engineering team of 5 in developing high-performance React/Next.js web applications. Created a custom component library that reduced feature development times by 30%.",
-      highlights: [
-        "Migrated legacy multi-page architectures to Next.js App Router, increasing page speeds by 45%.",
-        "Implemented secure, real-time analytics dashboards using WebSockets and optimized charts.",
-        "Introduced rigorous CI/CD test coverages (Jest, Playwright) achieving an 85% reduction in production regressions."
-      ]
-    },
-    {
-      role: "Frontend Developer",
-      company: "Creative Web Studio",
-      duration: "2022 - 2024",
-      location: "Kyoto, Japan",
-      description: "Designed and engineered highly interactive web layouts and user interfaces for high-profile clients globally. Focused on animations, design system engineering, and web performance.",
-      highlights: [
-        "Developed award-winning immersive marketing experiences integrating CSS 3D transforms and SVG animations.",
-        "Refined accessibility (WCAG 2.1 AA compliance) boosting Lighthouse accessibility scores from 65 to 100.",
-        "Collaborated closely with design leads to establish unified tokens for CSS styles, layouts, and colors."
-      ]
-    }
-  ],
-  education: [
-    {
-      degree: "B.S. in Computer Science",
-      institution: "Konkuk University",
-      duration: "2018 - 2022",
-      description: "Specialized in Software Engineering and Human-Computer Interaction. Graduated with honors."
-    }
-  ],
-  skills: {
-    frontend: [
-      { name: "JavaScript / TypeScript", level: 90 },
-      { name: "React & Next.js", level: 95 },
-      { name: "HTML5 / CSS3 / HSL Styles", level: 95 },
-      { name: "Tailwind CSS / Sass", level: 90 },
-      { name: "WebGL / SVG Animation", level: 75 }
-    ],
-    backend: [
-      { name: "Node.js / Express", level: 85 },
-      { name: "Python / FastAPI", level: 80 },
-      { name: "GraphQL & RESTful APIs", level: 85 },
-      { name: "PostgreSQL & MongoDB", level: 80 }
-    ],
-    tools: [
-      { name: "Git & GitHub Workflow", level: 90 },
-      { name: "Docker & Containerization", level: 75 },
-      { name: "Figma (UI/UX Prototyping)", level: 85 },
-      { name: "Vercel / AWS / Netlify", level: 80 }
-    ]
-  },
-  projects: [
-    {
-      title: "Interactive Workspace Dashboard",
-      category: "frontend",
-      description: "A collaborative interactive board workspace built with React featuring drag-and-drop widgets and state synchronization.",
-      tags: ["React", "TypeScript", "TailwindCSS", "Zustand"],
-      link: "https://github.com/qiwang2026",
-      live: "https://qiwang2026.github.io"
-    },
-    {
-      title: "AI Image Art Generator API",
-      category: "backend",
-      description: "A backend service wrapper for diffusion models using Python/FastAPI, featuring Redis task queuing and image hosting.",
-      tags: ["Python", "FastAPI", "Redis", "AWS S3"],
-      link: "https://github.com/qiwang2026",
-      live: "#"
-    },
-    {
-      title: "Sleek Glassmorphic Audio Player",
-      category: "frontend",
-      description: "A gorgeous, hardware-accelerated audio visualization canvas built using Web Audio API and responsive glassmorphism styles.",
-      tags: ["Vanilla JS", "Web Audio API", "CSS Grid", "Glassmorphism"],
-      link: "https://github.com/qiwang2026",
-      live: "https://qiwang2026.github.io"
-    }
-  ]
+profile: {
+name: "Wang Qi",
+nickname: "Rei",
+title: "International Commerce and Business Student",
+bio: "I am a freshman majoring in International Commerce and Business at Konkuk University. Besides my studies, I run a doll clothing business where I design and sell handmade outfits for dolls. I am also a guitarist in an underground band and enjoy music, creativity, and entrepreneurship. Recently, I have been exploring how AI tools can be applied to business, design, and everyday life.",
+avatar: "images/avatar.png",
+contact: {
+email: "[qiwang2026@outlook.com](mailto:qiwang2026@outlook.com)",
+phone: "010-59311153",
+location: "Seoul, South Korea",
+github: "https://github.com/qiwang2026-cloud",
+linkedin: "#",
+website: "https://qiwang2026-cloud.github.io/qiwang2026.github.io/"
+}
+},
+
+experience: [
+{
+role: "Doll Clothing Business Owner",
+company: "Independent Online Shop",
+duration: "2024 - Present",
+location: "Seoul, South Korea",
+description: "Designing, producing, and selling handmade doll clothing products through online communities and social media platforms.",
+highlights: [
+"Designed original doll outfits and accessories.",
+"Managed customer communication and order fulfillment.",
+"Created product photography and promotional content.",
+"Developed practical experience in e-commerce and entrepreneurship."
+]
+},
+{
+role: "Guitarist",
+company: "Independent Underground Band",
+duration: "2023 - Present",
+location: "Seoul, South Korea",
+description: "Performing as a guitarist and participating in independent music activities.",
+highlights: [
+"Performed at local live events and student activities.",
+"Collaborated with band members on music arrangements.",
+"Developed teamwork and stage performance skills.",
+"Explored creative expression through music."
+]
+}
+],
+
+education: [
+{
+degree: "Bachelor of International Commerce and Business",
+institution: "Konkuk University",
+duration: "2026 - Present",
+description: "Freshman student focusing on international business, digital commerce, marketing, entrepreneurship, and global trade."
+}
+],
+
+skills: {
+frontend: [
+{ name: "HTML", level: 75 },
+{ name: "CSS", level: 70 },
+{ name: "JavaScript", level: 65 }
+],
+
+```
+backend: [
+  { name: "AI Tools", level: 90 },
+  { name: "Business Analysis", level: 75 },
+  { name: "Digital Commerce", level: 80 },
+  { name: "Market Research", level: 75 }
+],
+
+tools: [
+  { name: "ChatGPT", level: 95 },
+  { name: "GitHub", level: 80 },
+  { name: "Microsoft Office", level: 90 },
+  { name: "Canva", level: 85 }
+]
+```
+
+},
+
+projects: [
+{
+title: "AI Resume & Portfolio Website",
+category: "web",
+description: "A personal portfolio website created with the assistance of AI tools and deployed on GitHub Pages.",
+tags: ["HTML", "CSS", "JavaScript", "ChatGPT"],
+link: "https://github.com/qiwang2026-cloud/qiwang2026.github.io",
+live: "https://qiwang2026-cloud.github.io/qiwang2026.github.io/"
+},
+{
+title: "Doll Clothing Business Portfolio",
+category: "business",
+description: "A project showcasing doll clothing design, product photography, online marketing, and e-commerce operations.",
+tags: ["E-commerce", "Design", "Marketing"],
+link: "https://github.com/qiwang2026-cloud/qiwang2026.github.io",
+live: "https://qiwang2026-cloud.github.io/qiwang2026.github.io/"
+},
+{
+title: "AI Study Assistant",
+category: "web",
+description: "A simple web application developed with AI assistance to help students organize study plans and improve learning efficiency.",
+tags: ["AI", "JavaScript", "Productivity"],
+link: "https://github.com/qiwang2026-cloud/qiwang2026.github.io",
+live: "https://qiwang2026-cloud.github.io/qiwang2026.github.io/"
+}
+]
 };
 
 // Export data for global browser script accessibility
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = resumeData;
+module.exports = resumeData;
 }
