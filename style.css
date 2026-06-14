@@ -30,8 +30,8 @@ body {
   height: 100px;
   margin: 0 auto;
   border-radius: 50%;
-  overflow: hidden;
   background: #333;
+  overflow: hidden;
 }
 
 .avatar-img {
@@ -58,7 +58,7 @@ h2 {
 #skills-grid div,
 #projects-grid div {
   background: #1c1c1c;
-  padding: 10px;
+  padding: 12px;
   margin-bottom: 10px;
-  border-radius: 6px;
+  border-radius: 8px;
 }
