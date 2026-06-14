@@ -971,3 +971,85 @@ textarea.form-control {
     outline: none !important;
   }
 }
+
+/* ===== FINAL APPLE STYLE UPGRADE ===== */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+  background: radial-gradient(circle at top, #0b1020, #05070f);
+  color: white;
+}
+
+/* layout */
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 120px 20px;
+}
+
+/* cards */
+.card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 18px;
+  padding: 24px;
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* title */
+h1 {
+  font-size: 56px;
+}
+
+h3 {
+  opacity: 0.7;
+}
+
+/* grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+/* skill bar */
+.skill-bar {
+  height: 7px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 999px;
+}
+
+.skill-fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #7c5cff, #22c55e);
+  transition: 1.2s;
+}
+
+/* reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* glow effect */
+.glow {
+  position: fixed;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(124,92,255,0.2), transparent 60%);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
