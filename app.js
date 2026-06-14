@@ -3,10 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
 const data = window.resumeData;
 
 if (!data) {
-  document.body.innerHTML = "DATA NOT FOUND";
+  console.error("resumeData not found");
   return;
 }
 
+// helper
 const set = (id, v) => {
   const el = document.getElementById(id);
   if (el) el.innerText = v || "";
@@ -27,31 +28,22 @@ set("profile-bio", data.profile?.bio);
 
 // CONTACT
 const c = data.profile?.contact || {};
-
 setLink("contact-email", c.email, "mailto:");
 setLink("contact-phone", c.phone, "tel:");
 setLink("contact-location", c.location);
 setLink("contact-website", c.website);
 
 // EXPERIENCE
-const exp = document.getElementById("experience-timeline");
-exp.innerHTML = (data.experience || [])
-.map(e => `
-  <div class="item">
-    <b>${e.role}</b><br/>
-    <span>${e.company}</span>
-  </div>
-`).join("");
+document.getElementById("experience-timeline").innerHTML =
+(data.experience || []).map(e =>
+  `<div class="item"><b>${e.role}</b> - ${e.company}</div>`
+).join("");
 
 // EDUCATION
-const edu = document.getElementById("education-timeline");
-edu.innerHTML = (data.education || [])
-.map(e => `
-  <div class="item">
-    <b>${e.degree}</b><br/>
-    <span>${e.institution}</span>
-  </div>
-`).join("");
+document.getElementById("education-timeline").innerHTML =
+(data.education || []).map(e =>
+  `<div class="item"><b>${e.degree}</b> - ${e.institution}</div>`
+).join("");
 
 // SKILLS
 const skills = [
@@ -65,11 +57,8 @@ skills.map(s => `<div class="item">${s.name}</div>`).join("");
 
 // PROJECTS
 document.getElementById("projects-grid").innerHTML =
-(data.projects || []).map(p => `
-  <div class="item">
-    <b>${p.title}</b><br/>
-    <span>${p.description || ""}</span>
-  </div>
-`).join("");
+(data.projects || []).map(p =>
+  `<div class="item"><b>${p.title}</b></div>`
+).join("");
 
 });
