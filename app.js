@@ -17,23 +17,15 @@ document.getElementById("contact-website").innerText = c.website;
 
 // EXPERIENCE
 document.getElementById("experience-timeline").innerHTML =
-data.experience.map(e => `
-  <div>
-    <h3>${e.role}</h3>
-    <p>${e.company}</p >
-    <small>${e.duration}</small>
-  </div>
-`).join("");
+data.experience.map(e =>
+  `<div><b>${e.role}</b><br>${e.company}<br>${e.duration}</div>`
+).join("");
 
 // EDUCATION
 document.getElementById("education-timeline").innerHTML =
-data.education.map(e => `
-  <div>
-    <h3>${e.degree}</h3>
-    <p>${e.institution}</p >
-    <small>${e.duration}</small>
-  </div>
-`).join("");
+data.education.map(e =>
+  `<div><b>${e.degree}</b><br>${e.institution}<br>${e.duration}</div>`
+).join("");
 
 // SKILLS
 document.getElementById("skills-grid").innerHTML =
@@ -41,19 +33,14 @@ document.getElementById("skills-grid").innerHTML =
   ...data.skills.frontend,
   ...data.skills.backend,
   ...data.skills.tools
-].map(s => `
-  <div>
-    ${s.name} - ${s.level}%
-  </div>
-`).join("");
+].map(s =>
+  `<div>${s.name} - ${s.level}%</div>`
+).join("");
 
 // PROJECTS
 document.getElementById("projects-grid").innerHTML =
-data.projects.map(p => `
-  <div>
-    <h3>${p.title}</h3>
-    <p>${p.description}</p >
-  </div>
-`).join("");
+data.projects.map(p =>
+  `<div><b>${p.title}</b><br>${p.description}</div>`
+).join("");
 
 });
