@@ -1,58 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Wang Qi | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wang Qi | Portfolio 3.0</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="hero">
-  <h1 id="name">Loading...</h1>
-  <p id="title">Loading...</p >
-</header>
+<div class="layout">
 
-<div class="container">
-
-  <section class="card">
-    <h2>About</h2>
+  <aside class="sidebar fade-in">
+    <h1 id="name">Loading...</h1>
+    <p id="title"></p >
     <p id="bio"></p >
-  </section>
+    <div id="contact"></div>
+  </aside>
 
-  <section class="grid">
+  <main class="content">
 
-    <div class="card">
+    <section class="reveal">
       <h2>Experience</h2>
       <div id="experience"></div>
-    </div>
+    </section>
 
-    <div class="card">
+    <section class="reveal">
       <h2>Education</h2>
       <div id="education"></div>
-    </div>
+    </section>
 
-    <div class="card">
+    <section class="reveal">
       <h2>Skills</h2>
       <div id="skills"></div>
-    </div>
+    </section>
 
-    <div class="card">
+    <section class="reveal">
       <h2>Projects</h2>
       <div id="projects"></div>
-    </div>
+    </section>
 
-  </section>
+  </main>
 
-  <section class="card">
-    <h2>Contact</h2>
-    <p id="contact"></p >
-  </section>
+</div>
 
+<!-- Modal -->
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <span id="close">&times;</span>
+    <h2 id="modal-title"></h2>
+    <p id="modal-text"></p >
+  </div>
 </div>
 
 <script src="data.js"></script>
 <script src="app.js"></script>
+
 </body>
 </html>
