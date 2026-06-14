@@ -1,64 +1,49 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
 body {
-  background: #0f0f0f;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  background: #0b0b0f;
   color: white;
 }
 
-.app-container {
-  display: flex;
-  min-height: 100vh;
-}
-
-.sidebar {
-  width: 300px;
-  padding: 20px;
-  background: #151515;
-}
-
-.profile-card {
+.hero {
   text-align: center;
+  padding: 80px 20px;
 }
 
-.avatar-wrapper {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
-  border-radius: 50%;
-  background: #333;
-  overflow: hidden;
+.hero h1 {
+  font-size: 40px;
 }
 
-.avatar-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.hero p {
+  color: #aaa;
 }
 
-.content-area {
-  flex: 1;
-  padding: 30px;
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
 }
 
-section {
-  margin-bottom: 40px;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
-h2 {
-  margin-bottom: 10px;
+.card {
+  background: rgba(255,255,255,0.06);
+  padding: 20px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
 }
 
-#experience-timeline div,
-#education-timeline div,
-#skills-grid div,
-#projects-grid div {
-  background: #1c1c1c;
-  padding: 12px;
-  margin-bottom: 10px;
-  border-radius: 8px;
+.card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.1);
+}
+
+.item {
+  padding: 6px 0;
+  color: #ddd;
 }
