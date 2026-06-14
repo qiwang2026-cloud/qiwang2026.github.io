@@ -1,27 +1,27 @@
 const data = {
   name: "Wang Qi",
   title: "International Commerce & Business Student",
-  bio: "Freshman at Konkuk University. Running a doll clothing business, guitarist in a band, exploring AI in business and creativity.",
+  bio: "Freshman at Konkun University. Running a doll clothing business, guitarist in a band, exploring AI tools in business.",
+
+  contact: "qiwang2026@outlook.com | 010-59311153 | Seoul",
 
   experience: [
-    "Doll Clothing Business Owner (2024 - Present)",
-    "Guitarist in Underground Band (2023 - Present)"
+    { title: "Doll Clothing Business Owner", detail: "Designed and sold handmade doll clothing via online platforms." },
+    { title: "Guitarist", detail: "Performed in underground band events and campus shows." }
   ],
 
   education: [
-    "Konkuk University - International Commerce (2026 - Present)"
+    { title: "Konkuk University", detail: "International Commerce & Business (2026 - Present)" }
   ],
 
   skills: [
-    "HTML / CSS / JavaScript",
-    "AI Tools & Business Analysis",
-    "Marketing & E-commerce"
+    { name: "HTML/CSS/JS", level: 85 },
+    { name: "AI Tools", level: 95 },
+    { name: "Marketing", level: 80 }
   ],
 
   projects: [
-    "AI Resume Website",
-    "Doll Clothing Brand Portfolio"
-  ],
-
-  contact: "qiwang2026@outlook.com | 010-59311153 | Seoul"
+    { title: "AI Resume Website", detail: "Personal portfolio built with AI tools." },
+    { title: "Doll Clothing Brand", detail: "E-commerce design & marketing project." }
+  ]
 };
