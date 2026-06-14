@@ -1,40 +1,42 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  console.log("app.js running");
-
   const data = window.resumeData;
 
   if (!data) {
-    console.error("❌ resumeData not found");
+    console.error("NO DATA LOADED");
     return;
   }
 
-  // LEFT SIDE
-  const set = (id, val) => {
-    const el = document.getElementById(id);
-    if (el) el.innerText = val || "";
-  };
+  const el = (id) => document.getElementById(id);
 
-  set("profile-name", data.profile?.name);
-  set("profile-nickname", data.profile?.nickname);
-  set("profile-title", data.profile?.title);
-  set("profile-bio", data.profile?.bio);
+  // LEFT SIDE
+  if (el("profile-name")) el("profile-name").innerText = data.profile?.name || "";
+  if (el("profile-nickname")) el("profile-nickname").innerText = data.profile?.nickname || "";
+  if (el("profile-title")) el("profile-title").innerText = data.profile?.title || "";
+  if (el("profile-bio")) el("profile-bio").innerText = data.profile?.bio || "";
 
   const c = data.profile?.contact || {};
+  if (el("contact-email")) el("contact-email").innerText = c.email || "";
+  if (el("contact-phone")) el("contact-phone").innerText = c.phone || "";
+  if (el("contact-location")) el("contact-location").innerText = c.location || "";
+  if (el("contact-website")) el("contact-website").innerText = c.website || "";
 
-  set("contact-email", c.email);
-  set("contact-phone", c.phone);
-  set("contact-location", c.location);
-  set("contact-website", c.website);
-
-  // RIGHT SIDE SAFE RENDER
+  // RIGHT SIDE (SAFE)
   const exp = data.experience || [];
-  document.getElementById("experience-timeline").innerHTML =
-    exp.map(e => `<div><h3>${e.role}</h3><p>${e.company}</p ></div>`).join("");
+  const expBox = el("experience-timeline");
+  if (expBox) {
+    expBox.innerHTML = exp.map(i =>
+      `<div><h3>${i.role}</h3><p>${i.company}</p ></div>`
+    ).join("");
+  }
 
   const edu = data.education || [];
-  document.getElementById("education-timeline").innerHTML =
-    edu.map(e => `<div><h3>${e.degree}</h3><p>${e.institution}</p ></div>`).join("");
+  const eduBox = el("education-timeline");
+  if (eduBox) {
+    eduBox.innerHTML = edu.map(i =>
+      `<div><h3>${i.degree}</h3></div>`
+    ).join("");
+  }
 
   const skills = [
     ...(data.skills?.frontend || []),
@@ -42,12 +44,20 @@ document.addEventListener("DOMContentLoaded", () => {
     ...(data.skills?.tools || [])
   ];
 
-  document.getElementById("skills-grid").innerHTML =
-    skills.map(s => `<div>${s.name} - ${s.level}%</div>`).join("");
+  const skillBox = el("skills-grid");
+  if (skillBox) {
+    skillBox.innerHTML = skills.map(i =>
+      `<div>${i.name || ""}</div>`
+    ).join("");
+  }
 
-  const projects = data.projects || [];
-  document.getElementById("projects-grid").innerHTML =
-    projects.map(p => `<div><h3>${p.title}</h3></div>`).join("");
+  const proj = data.projects || [];
+  const projBox = el("projects-grid");
+  if (projBox) {
+    projBox.innerHTML = proj.map(i =>
+      `<div><h3>${i.title}</h3></div>`
+    ).join("");
+  }
 
-  console.log("✅ render done");
+  console.log("OK LOADED");
 });
