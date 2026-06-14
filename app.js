@@ -1,45 +1,75 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  const data = window.resumeData;
+const data = window.resumeData;
 
-  document.getElementById("profile-name").textContent =
-    data.profile.name;
+if (!data) {
+  document.body.innerHTML = "DATA NOT FOUND";
+  return;
+}
 
-  document.getElementById("profile-title").textContent =
-    data.profile.title;
+const set = (id, v) => {
+  const el = document.getElementById(id);
+  if (el) el.innerText = v || "";
+};
 
-  document.getElementById("profile-bio").textContent =
-    data.profile.bio;
+const setLink = (id, v, prefix="") => {
+  const el = document.getElementById(id);
+  if (el) {
+    el.innerText = v || "";
+    if (v && prefix) el.href = prefix + v;
+  }
+};
 
-  document.getElementById("contact-email").textContent =
-    data.profile.contact.email;
+// PROFILE
+set("profile-name", data.profile?.name);
+set("profile-title", data.profile?.title);
+set("profile-bio", data.profile?.bio);
 
-  document.getElementById("contact-phone").textContent =
-    data.profile.contact.phone;
+// CONTACT
+const c = data.profile?.contact || {};
 
-  document.getElementById("contact-location").textContent =
-    data.profile.contact.location;
+setLink("contact-email", c.email, "mailto:");
+setLink("contact-phone", c.phone, "tel:");
+setLink("contact-location", c.location);
+setLink("contact-website", c.website);
 
-  document.getElementById("about-text").textContent =
-    data.about;
+// EXPERIENCE
+const exp = document.getElementById("experience-timeline");
+exp.innerHTML = (data.experience || [])
+.map(e => `
+  <div class="item">
+    <b>${e.role}</b><br/>
+    <span>${e.company}</span>
+  </div>
+`).join("");
 
-  document.getElementById("experience-timeline").innerHTML =
-    data.experience.map(item =>
-      `<div><h3>${item.role}</h3><p>${item.company}</p></div>`
-    ).join("");
+// EDUCATION
+const edu = document.getElementById("education-timeline");
+edu.innerHTML = (data.education || [])
+.map(e => `
+  <div class="item">
+    <b>${e.degree}</b><br/>
+    <span>${e.institution}</span>
+  </div>
+`).join("");
 
-  document.getElementById("education-timeline").innerHTML =
-    data.education.map(item =>
-      `<div><h3>${item.degree}</h3><p>${item.institution}</p></div>`
-    ).join("");
+// SKILLS
+const skills = [
+  ...(data.skills?.frontend || []),
+  ...(data.skills?.backend || []),
+  ...(data.skills?.tools || [])
+];
 
-  document.getElementById("skills-grid").innerHTML =
-    data.skills.frontend.map(item =>
-      `<span>${item.name}</span><br>`
-    ).join("");
+document.getElementById("skills-grid").innerHTML =
+skills.map(s => `<div class="item">${s.name}</div>`).join("");
 
-  document.getElementById("projects-grid").innerHTML =
-    data.projects.map(item =>
-      `<div>${item.title}</div>`
-    ).join("");
+// PROJECTS
+document.getElementById("projects-grid").innerHTML =
+(data.projects || []).map(p => `
+  <div class="item">
+    <b>${p.title}</b><br/>
+    <span>${p.description || ""}</span>
+  </div>
+`).join("");
+
 });
