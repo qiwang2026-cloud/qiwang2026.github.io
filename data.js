@@ -20,23 +20,14 @@ languages:[
 const skills = [
 
 "International Business",
-
-"International Trade",
-
 "Cross-Border E-commerce",
-
-"Brand Management",
-
+"International Trade",
 "Digital Marketing",
-
-"Product Development",
-
+"Brand Management",
+"Entrepreneurship",
 "Product Photography",
-
 "English Communication",
-
 "Japanese Communication",
-
 "Leadership"
 
 ];
@@ -46,25 +37,25 @@ const projects = [
 {
 title:"REI Doll Atelier",
 description:
-"Founded and operated a doll clothes business including product design, branding, photography and sales."
+"Founded and operated a doll clothes business involving design, photography, branding and sales."
 },
 
 {
 title:"Cross-Border E-commerce",
 description:
-"Managed international sales and customer communication across different markets."
+"Managed international sales and customer communication."
 },
 
 {
 title:"Underground Rock Band",
 description:
-"Lead guitarist involved in songwriting, rehearsals and live performances."
+"Lead guitarist involved in songwriting and live performance."
 },
 
 {
 title:"Cross-Border Business Toolkit",
 description:
-"Business web application featuring profit calculation, currency conversion and inventory value estimation."
+"A web application for profit calculation, currency conversion and inventory estimation."
 }
 
 ];
