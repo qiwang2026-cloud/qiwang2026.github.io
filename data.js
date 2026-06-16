@@ -1,40 +1,42 @@
 const skills = [
-    "International Business",
-    "Cross-Border E-commerce",
-    "International Trade",
-    "Business Strategy",
-    "Brand Management",
-    "Digital Marketing",
-    "AI Tools",
-    "GitHub Pages",
-    "Leadership",
-    "Team Collaboration"
+
+"International Business",
+"International Trade",
+"Cross-Border E-commerce",
+"Brand Management",
+"Digital Marketing",
+"Product Development",
+"Product Photography",
+"English Communication",
+"Japanese Communication",
+"Leadership"
+
 ];
 
 const projects = [
 
 {
-title:"Doll Clothes Business",
+title:"REI Doll Atelier",
 description:
-"Founded and operated a doll clothes business, managing product design, branding and customer communication."
+"Founded and operated a doll clothes business including product design, branding, photography and sales."
 },
 
 {
 title:"Cross-Border E-commerce",
 description:
-"Expanded sales internationally and gained practical experience in global business operations."
+"Managed international sales and customer communication."
 },
 
 {
-title:"Underground Rock Band",
+title:"Underground Band",
 description:
-"Lead guitarist responsible for performances, songwriting and band collaboration."
+"Lead guitarist involved in songwriting, rehearsals and performances."
 },
 
 {
-title:"AI Portfolio Website",
+title:"Cross-Border Business Toolkit",
 description:
-"Designed and developed this portfolio website with AI assistance and deployed it through GitHub Pages."
+"Web application including profit calculator, currency converter and inventory value calculator."
 }
 
 ];
