@@ -14,7 +14,7 @@
 
 <body>
 
-<section class="hero">
+<header class="hero">
 
 <div class="hero-content">
 
@@ -35,32 +35,29 @@ Explore
 
 </div>
 
-</section>
+</header>
 
 <section id="about">
 
 <h2>About Me</h2>
 
-<p>
-My name is WANGQI (REI).
-</p>
+<div id="profile"></div>
 
-<p>
-I am a first-year student majoring in International Business & Commerce at Konkuk University.
-</p>
+</section>
 
-<p>
-I founded and operated a doll clothes business and gained practical experience in cross-border e-commerce.
-</p>
+<section>
 
-<p>
-I am also the lead guitarist of an underground band.
-</p>
+<h2>Skills</h2>
 
-<p>
-Languages:
-Chinese, English, Japanese, Korean.
-</p>
+<div id="skills-container"></div>
+
+</section>
+
+<section>
+
+<h2>Projects</h2>
+
+<div id="projects-container"></div>
 
 </section>
 
@@ -70,11 +67,11 @@ Chinese, English, Japanese, Korean.
 
 <div class="gallery">
 
-<img src="images/doll1.jpg">
+<img src="images/doll1.jpg" alt="Doll 1">
 
-<img src="images/doll2.jpg">
+<img src="images/doll2.jpg" alt="Doll 2">
 
-<img src="images/doll3.jpg">
+<img src="images/doll3.jpg" alt="Doll 3">
 
 </div>
 
@@ -90,11 +87,11 @@ Chinese, English, Japanese, Korean.
 
 <h3>Profit Calculator</h3>
 
-<input id="cost" placeholder="Product Cost">
+<input type="number" id="cost" placeholder="Product Cost">
 
-<input id="shipping" placeholder="Shipping Cost">
+<input type="number" id="shipping" placeholder="Shipping Cost">
 
-<input id="price" placeholder="Selling Price">
+<input type="number" id="price" placeholder="Selling Price">
 
 <button onclick="calculateProfit()">
 Calculate
@@ -106,9 +103,9 @@ Calculate
 
 <div class="tool">
 
-<h3>USD → KRW</h3>
+<h3>USD → KRW Converter</h3>
 
-<input id="usd" placeholder="USD">
+<input type="number" id="usd" placeholder="USD">
 
 <button onclick="convertCurrency()">
 Convert
@@ -120,11 +117,11 @@ Convert
 
 <div class="tool">
 
-<h3>Inventory Value</h3>
+<h3>Inventory Value Calculator</h3>
 
-<input id="unitPrice" placeholder="Unit Price">
+<input type="number" id="unitPrice" placeholder="Unit Price">
 
-<input id="quantity" placeholder="Quantity">
+<input type="number" id="quantity" placeholder="Quantity">
 
 <button onclick="calculateInventory()">
 Calculate
@@ -138,28 +135,15 @@ Calculate
 
 </section>
 
-<section>
-
-<h2>Music</h2>
-
-<p>
-Lead Guitarist of an Underground Rock Band.
-</p>
-
-<p>
-Passionate about live performance, songwriting and creative collaboration.
-</p>
-
-</section>
-
 <footer>
 
 <p>
-WANGQI (REI)
+© 2026 WANGQI (REI)
 </p>
 
 </footer>
 
+<script src="data.js"></script>
 <script src="app.js"></script>
 
 </body>
