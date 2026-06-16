@@ -54,7 +54,27 @@ padding:80px 30px;
 
 h2{
 margin-bottom:30px;
-font-size:36px;
+}
+
+.card{
+background:#1e293b;
+padding:25px;
+border-radius:20px;
+}
+
+.skill-grid,
+.project-grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.skill,
+.project{
+background:#1e293b;
+padding:20px;
+border-radius:20px;
 }
 
 .gallery{
@@ -96,7 +116,13 @@ padding:12px;
 border:none;
 border-radius:10px;
 cursor:pointer;
-margin-top:10px;
+}
+
+#profitResult,
+#currencyResult,
+#inventoryResult{
+margin-top:15px;
+font-weight:bold;
 }
 
 footer{
