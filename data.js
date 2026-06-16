@@ -37,25 +37,25 @@ const projects = [
 {
 title:"REI Doll Atelier",
 description:
-"Founded and operated a doll clothes business involving design, photography, branding and sales."
+"Founded and operated a doll clothes business including product design, branding, photography and online sales."
 },
 
 {
 title:"Cross-Border E-commerce",
 description:
-"Managed international sales and customer communication."
+"Managed international sales and customer communication across different markets."
 },
 
 {
 title:"Underground Rock Band",
 description:
-"Lead guitarist involved in songwriting and live performance."
+"Lead guitarist involved in songwriting, rehearsals and live performances."
 },
 
 {
 title:"Cross-Border Business Toolkit",
 description:
-"A web application for profit calculation, currency conversion and inventory estimation."
+"A web application featuring profit calculation, currency conversion and inventory management."
 }
 
 ];
