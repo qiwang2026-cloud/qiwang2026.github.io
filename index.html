@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>WANGQI (REI) Portfolio</title>
+<title>REI | Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -13,42 +14,35 @@
 
 <body>
 
-<nav>
+<section class="hero">
 
-<div class="logo">REI</div>
+<div class="hero-content">
 
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#toolkit">Toolkit</a></li>
-<li><a href="#resume">Resume</a></li>
-</ul>
+<h1>REI</h1>
 
-</nav>
-
-<header class="hero">
-
-<h1>WANGQI (REI)</h1>
-
-<p class="subtitle">
-International Business & Commerce Student
-</p>
+<h2>
+International Business &
+Creative Entrepreneurship
+</h2>
 
 <p>
-Entrepreneur · Cross-Border Seller · Musician
+Konkuk University
 </p>
 
-</header>
+<a href="#about" class="btn">
+Explore
+</a>
+
+</div>
+
+</section>
 
 <section id="about">
 
 <h2>About Me</h2>
 
-<div class="card">
-
 <p>
-Hello! My name is WANGQI (REI).
+My name is WANGQI (REI).
 </p>
 
 <p>
@@ -56,7 +50,7 @@ I am a first-year student majoring in International Business & Commerce at Konku
 </p>
 
 <p>
-I founded and operated a doll clothes business and gained practical experience through cross-border sales and customer communication.
+I founded and operated a doll clothes business and gained practical experience in cross-border e-commerce.
 </p>
 
 <p>
@@ -65,43 +59,22 @@ I am also the lead guitarist of an underground band.
 
 <p>
 Languages:
-Chinese (Native),
-English (Fluent),
-Japanese (Basic),
-Korean (Beginner).
+Chinese, English, Japanese, Korean.
 </p>
 
-</div>
-
 </section>
 
-<section id="skills">
+<section>
 
-<h2>Skills</h2>
-
-<div id="skills-container"></div>
-
-</section>
-
-<section id="projects">
-
-<h2>Projects & Experience</h2>
-
-<div id="projects-container"></div>
-
-</section>
-
-<section id="gallery">
-
-<h2>Doll Clothes Collection</h2>
+<h2>REI Doll Atelier</h2>
 
 <div class="gallery">
 
-<img src="images/doll1.jpg" alt="Doll Dress">
+<img src="images/doll1.jpg">
 
-<img src="images/doll2.jpg" alt="Doll Dress">
+<img src="images/doll2.jpg">
 
-<img src="images/doll3.jpg" alt="Doll Dress">
+<img src="images/doll3.jpg">
 
 </div>
 
@@ -111,31 +84,31 @@ Korean (Beginner).
 
 <h2>Cross-Border Business Toolkit</h2>
 
-<div class="card">
+<div class="tool-grid">
+
+<div class="tool">
 
 <h3>Profit Calculator</h3>
 
-<input type="number" id="cost" placeholder="Product Cost">
+<input id="cost" placeholder="Product Cost">
 
-<input type="number" id="shipping" placeholder="Shipping Cost">
+<input id="shipping" placeholder="Shipping Cost">
 
-<input type="number" id="price" placeholder="Selling Price">
+<input id="price" placeholder="Selling Price">
 
 <button onclick="calculateProfit()">
-Calculate Profit
+Calculate
 </button>
 
 <div id="profitResult"></div>
 
 </div>
 
-<br>
+<div class="tool">
 
-<div class="card">
+<h3>USD → KRW</h3>
 
-<h3>USD → KRW Converter</h3>
-
-<input type="number" id="usd" placeholder="USD">
+<input id="usd" placeholder="USD">
 
 <button onclick="convertCurrency()">
 Convert
@@ -145,63 +118,48 @@ Convert
 
 </div>
 
-<br>
+<div class="tool">
 
-<div class="card">
+<h3>Inventory Value</h3>
 
-<h3>Inventory Value Calculator</h3>
+<input id="unitPrice" placeholder="Unit Price">
 
-<input type="number" id="unitPrice" placeholder="Unit Price">
-
-<input type="number" id="quantity" placeholder="Quantity">
+<input id="quantity" placeholder="Quantity">
 
 <button onclick="calculateInventory()">
-Calculate Value
+Calculate
 </button>
 
 <div id="inventoryResult"></div>
 
 </div>
 
+</div>
+
 </section>
 
-<section id="resume">
+<section>
 
-<h2>Resume</h2>
+<h2>Music</h2>
 
-<div class="card">
+<p>
+Lead Guitarist of an Underground Rock Band.
+</p>
 
-<h3>Education</h3>
-
-<p>Konkuk University</p>
-
-<p>Major: International Business & Commerce</p>
-
-<p>First-Year Student (2026)</p>
-
-<br>
-
-<h3>Experience</h3>
-
-<ul>
-<li>Founder of Doll Clothes Business</li>
-<li>Cross-Border E-commerce Seller</li>
-<li>Lead Guitarist of Underground Band</li>
-</ul>
-
-</div>
+<p>
+Passionate about live performance, songwriting and creative collaboration.
+</p>
 
 </section>
 
 <footer>
 
 <p>
-© 2026 WANGQI (REI)
+WANGQI (REI)
 </p>
 
 </footer>
 
-<script src="data.js"></script>
 <script src="app.js"></script>
 
 </body>
