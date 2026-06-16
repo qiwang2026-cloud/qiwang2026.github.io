@@ -31,16 +31,14 @@ document.getElementById("skills-container");
 const skillGrid =
 document.createElement("div");
 
-skillGrid.className =
-"skill-grid";
+skillGrid.className = "skill-grid";
 
 skills.forEach(skill => {
 
 const item =
 document.createElement("div");
 
-item.className =
-"skill";
+item.className = "skill";
 
 item.innerHTML =
 `<h3>${skill}</h3>`;
@@ -57,16 +55,14 @@ document.getElementById("projects-container");
 const projectGrid =
 document.createElement("div");
 
-projectGrid.className =
-"project-grid";
+projectGrid.className = "project-grid";
 
 projects.forEach(project => {
 
 const item =
 document.createElement("div");
 
-item.className =
-"project";
+item.className = "project";
 
 item.innerHTML = `
 <h3>${project.title}</h3>
